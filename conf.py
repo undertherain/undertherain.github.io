@@ -78,7 +78,7 @@ NAVIGATION_LINKS = {
     DEFAULT_LANG:
     (
         ("/publications/", "Publications"),
-        ("/cv/", "Curriculum Vitae"),
+        ("/assets/Aleksandr_Drozd_CV.pdf", "Curriculum Vitae"),
     )
 }
 
