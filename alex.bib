@@ -59,6 +59,38 @@
   fulltext={http://www.aclweb.org/anthology/W16-2507}
 }
 
+@ARTICLE{7372425,
+author={H. Shamoto and K. Shirahata and A. Drozd and H. Sato and S. Matsuoka},
+journal={IEEE Transactions on Big Data},
+title={GPU-Accelerated Large-Scale Distributed Sorting Coping with Device Memory Capacity},
+year={2016},
+volume={2},
+number={1},
+pages={57-69},
+keywords={computational complexity;graphics processing units;parallel algorithms;parallel machines;performance evaluation;sorting;CPU-GPU host-to-device bandwidth;GPU memory capacity;GPU-accelerated large-scale distributed sorting;HykSort algorithm;NVIDIA K20x GPU;TSUBAME2.5 supercomputer;communication complexity;computation cost reduction;data size;device memory capacity;out-of-core local sort;overhead analysis;performance evaluation;splitter-based parallel sorting algorithm;weak-scaling analysis;Acceleration;Bandwidth;Data transfer;Graphics processing units;Hypercubes;Performance evaluation;Sorting;Big Data Applications;Distributed Systems;GPGPU;GPGPU,;Hybrid Programming;Sorting;big data applications;distributed systems;hybrid programming},
+doi={10.1109/TBDATA.2015.2511001},
+ISSN={},
+month={March},}
+
+@Article{Drozd2016,
+author="Drozd, Aleksandr
+and Witkowski, Olaf
+and Matsuoka, Satoshi
+and Ikegami, Takashi",
+title="Critical mass in the emergence of collective intelligence: a parallelized simulation of swarms in noisy environments",
+journal="Artificial Life and Robotics",
+year="2016",
+month="Sep",
+day="01",
+volume="21",
+number="3",
+pages="317--323",
+abstract="We extend an abstract agent-based swarming model based on the evolution of neural network controllers, to explore further the emergence of swarming. Our model is grounded in the ecological situation, in which agents can access some information from the environment about the resource location, but through a noisy channel. Swarming critically improves the efficiency of group foraging, by allowing agents to reach resource areas much more easily by correcting individual mistakes in group dynamics. As high levels of noise may make the emergence of collective behavior depend on a critical mass of agents, it is crucial to reach sufficient computing power to allow for the evolution of the whole set of dynamics in simulation. Since simulating neural controllers and information exchanges between agents are computationally intensive, to scale up simulations to model critical masses of individuals, the implementation requires careful optimization. We apply techniques from astrophysics known as treecodes to compute the signal propagation, and efficiently parallelize for multi-core architectures. Our results open up future research on signal-based emergent collective behavior as a valid collective strategy for uninformed search over a domain space.",
+issn="1614-7456",
+doi="10.1007/s10015-016-0303-8",
+url="https://doi.org/10.1007/s10015-016-0303-8"
+}
+
 
 @inproceedings{drozd2016word,
   title={Word embeddings, analogies, and machine learning: Beyond king-man+ woman= queen},
@@ -69,6 +101,18 @@
   fulltext={https://pdfs.semanticscholar.org/686b/52953471a9d7a515215ba54ad0350c6b0472.pdf}
 }
 
+@INPROCEEDINGS{7836839,
+author={M. Bysiek and A. Drozd and S. Matsuoka},
+booktitle={2016 6th Workshop on Python for High-Performance and Scientific Computing (PyHPC)},
+title={Migrating Legacy Fortran to Python While Retaining Fortran-Level Performance through Transpilation and Type Hints},
+year={2016},
+volume={},
+number={},
+pages={9-18},
+keywords={FORTRAN;program compilers;software maintenance;FORTRAN-level performance;Python 3.5;Python syntax;just-in-time compilation;legacy FORTRAN migration;performance-critical kernels;two-way transpilation;type hints mechanism;C++ languages;Context;Interoperability;Kernel;Optimization;Programming;Standards;Application migration;gradual typing;interoperability;just-in-time compilation;legacy code;software maintenance;transpilation},
+doi={10.1109/PyHPC.2016.006},
+ISSN={},
+month={Nov},}
 
 
 @inproceedings{drozd2015discovering,
@@ -88,4 +132,125 @@
   pages={1},
   year={2015},
   organization={ACM}
+}
+
+
+@InProceedings{Drozd14Interactive,
+  Title                    = {HPC and Interactive Big Data Analytics: Case Study of Distributional Semantics.},
+  Author                   = {Aleksandr Drozd and Satoshi Matsuoka.},
+  Booktitle                = {Proceedings of IPSJ SIG Technical Reports HPC-146},
+  Year                     = {2014},
+
+  Address                  = {Naha},
+  Month                    = {Oct},
+
+  Owner                    = {blackbird},
+  Timestamp                = {2015.08.27}
+}
+
+@InProceedings{Shamoto2014,
+  Title                    = {Large-scale Distributed Sorting for GPU-based Heterogeneous Supercomputers},
+  Author                   = {Hideyuki Shamoto and Koichi Shirahata and Aleksandr Drozd and Hitoshi Sato and Satoshi Matsuoka},
+  Booktitle                = {Proceedings of 2014 IEEE International Conference on Big Data (IEEE BigData 2014)},
+  Year                     = {2014},
+  Note                     = {(to appear)},
+
+  Owner                    = {blackbird},
+  Timestamp                = {2015.01.05}
+}
+
+
+@InProceedings{Drozd2012MultiGpuAlignment,
+author="Drozd, Aleksandr
+and Maruyama, Naoya
+and Matsuoka, Satoshi",
+editor="Dayd{\'e}, Michel
+and Marques, Osni
+and Nakajima, Kengo",
+title="A Multi GPU Read Alignment Algorithm with Model-Based Performance Optimization",
+booktitle="High Performance Computing for Computational Science - VECPAR 2012",
+year="2013",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="270--277",
+abstract="This paper describes a performance model for read alignment problem, one of the most computationally intensive tasks in bioinformatics. We adapted Burrows Wheeler transform based index to be used with GPUs to reduce overall memory footprint. A mathematical model of computation and communication costs was developed to find optimal memory partitioning for index and queries. Last we explored the possibility of using multiple GPUs to reduce data transfers and achieved super-linear speedup. Performance evaluation of experimental implementation supports our claims and shows more than 10fold performance gain per device.",
+isbn="978-3-642-38718-0"
+}
+
+
+
+@INPROCEEDINGS{6906839,
+author={A. Drozd and M. Pericàs and S. Matsuoka},
+booktitle={2014 IEEE International Congress on Big Data},
+title={Efficient String Sorting on Multi - and Many-Core Architectures},
+year={2014},
+volume={},
+number={},
+pages={637-644},
+keywords={graphics processing units;multiprocessing systems;sorting;CPU;GPU;PCIe bus bandwidth;communication-reducing strategy;digit radix sort algorithm;manycore architectures;manycore processors;multicore architectures;multicore processors;sorting rates;sorting throughput;string sorting algorithm;system resources;Graphics processing units;Histograms;Instruction sets;Kernel;Radiation detectors;Sockets;Sorting;GPU;multi-core;sorting},
+doi={10.1109/BigData.Congress.2014.97},
+ISSN={2379-7703},
+month={June},}
+
+@InProceedings{Drozd2013Vecpar,
+  Title                    = {A Multi GPU Read Alignment Algorithm with Model-Based Performance Optimization},
+  Author                   = {Drozd, Aleksandr and Maruyama, Naoya and Matsuoka, Satoshi},
+  Booktitle                = {High Performance Computing for Computational Science - VECPAR 2012},
+  Year                     = {2013},
+  Pages                    = {270-277},
+  Publisher                = {Springer-Verlag},
+  Series                   = {7851},
+
+  Doi                      = {10.1007/978-3-642-38718-0_27},
+  Owner                    = {blackbird},
+  Timestamp                = {2013.12.11},
+  Url                      = {http://dx.doi.org/10.1007/978-3-642-38718-0_27}
+}
+
+@InProceedings{Drozd2013IPDPS,
+  Title                    = {Sequence Alignment on Massively Parallel Heterogeneous Systems},
+  Author                   = {Aleksandr Drozd and Naoya Maruyama and Satoshi Matsuoka},
+  Booktitle                = {in proceedings of IEEE 26th International Parallel and Distributed Processing Symposium Workshops \& PhD Forum},
+  Year                     = {2012},
+  Pages                    = {2498 - 2501},
+
+  Owner                    = {blackbird},
+  Timestamp                = {2013.12.11}
+}
+
+
+@article{170000079468,
+author="Aleksandr, Drozd and Satoshi, Matsuoka",
+title="MSD Radix String Sort on GPU: Longer Keys, Shorter Alphabets",
+journal="研究報告計算機アーキテクチャ（ARC）",
+ISSN="",
+publisher="",
+year="2013",
+month="dec",
+volume="2013",
+number="21",
+pages="1-6",
+URL="https://ci.nii.ac.jp/naid/170000079468/en/",
+DOI="",
+}
+
+
+@InProceedings{DrozdSWoPP2011,
+  Title                    = {Fast Read Alignment with Burrows Wheeler Transform: the GPU Perspective},
+  Author                   = {Aleksandr Drozd and Naoya Maruyama and Satoshi Matsuoka},
+  Booktitle                = {Proceedings of the 24th Summer United Workshops on Parallel, Distributed, and Cooperative Processing (SWoPP 2011)},
+  Year                     = {2011},
+  Pages                    = {341}
+}
+
+@Article{Gladkova2009Querying,
+  Title                    = {Towards Easier Querying of XML-based Linguistic Corpora},
+  Author                   = {Gladkova G.P., Drozd A.A.},
+  Journal                  = {Taurida Bulletin of Mathematics and Informatics.},
+  Year                     = {2009},
+  Pages                    = {71-77},
+  Volume                   = {2},
+
+  Owner                    = {blackbird},
+  Timestamp                = {2013.11.29}
 }
