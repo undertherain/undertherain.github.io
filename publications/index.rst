@@ -16,3 +16,4 @@ Publication List
 .. publication_list:: alex.bib
    :style: unsrt
    :detail_page_dir:
+   :highlight_author: Aleksandr Drozd
