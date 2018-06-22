@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://blackbird.pw/</loc>
-  <lastmod>2018-06-22T08:53:00Z</lastmod>
+  <lastmod>2018-06-22T09:40:00Z</lastmod>
  </url>
  <url>
   <loc>http://blackbird.pw/404/</loc>
@@ -32,6 +32,10 @@
  <url>
   <loc>http://blackbird.pw/listings/cf.py.html</loc>
   <lastmod>2018-06-22T09:37:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://blackbird.pw/performance/</loc>
+  <lastmod>2018-06-22T09:40:00Z</lastmod>
  </url>
  <url>
   <loc>http://blackbird.pw/publications/</loc>
