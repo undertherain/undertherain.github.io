@@ -14,27 +14,41 @@
 <section class="container">
   <h1>Performance measurement results</h1>
 
-<body>
+
+<div class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input" id="cb0">
+    <label class="custom-control-label" for="cb0">Device 1</label>
+</div>
+
+<div class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input" id="defaultUnchecked1">
+    <label class="custom-control-label" for="defaultUnchecked1">Framework 1</label>
+</div>
+<div class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input" id="defaultUnchecked2">
+    <label class="custom-control-label" for="defaultUnchecked2">Framework 2</label>
+</div>
+
 <canvas id="myChart" width="800" height="450"></canvas>
 <script>
 var ctx = document.getElementById("myChart").getContext("2d");
-
+var color = Chart.helpers.color;
 var data = {
     labels: ["Chocolate", "Vanilla", "Strawberry"],
     datasets: [
         {
             label: "Harpo",
-            backgroundColor: "blue",
+            backgroundColor: "TEAL",
             data: [3,7,4]
         },
         {
             label: "Chico",
-            backgroundColor: "red",
+            backgroundColor: "OLIVE",
             data: [4,3,5]
         },
         {
             label: "Groucho",
-            backgroundColor: "green",
+            backgroundColor: "ORANGE",
             data: [7,2,6]
         }
     ]
