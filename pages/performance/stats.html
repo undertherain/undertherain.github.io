@@ -15,26 +15,43 @@
   <h1>Performance measurement results</h1>
 
 <body>
-<canvas id="bar-chart" width="800" height="450"></canvas>
+<canvas id="myChart" width="800" height="450"></canvas>
 <script>
-new Chart(document.getElementById("bar-chart"), {
-    type: 'bar',
-    data: {
-      labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
-      datasets: [
+var ctx = document.getElementById("myChart").getContext("2d");
+
+var data = {
+    labels: ["Chocolate", "Vanilla", "Strawberry"],
+    datasets: [
         {
-          label: "Population (millions)",
-          backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
-          data: [2478,5267,734,784,433]
+            label: "Harpo",
+            backgroundColor: "blue",
+            data: [3,7,4]
+        },
+        {
+            label: "Chico",
+            backgroundColor: "red",
+            data: [4,3,5]
+        },
+        {
+            label: "Groucho",
+            backgroundColor: "green",
+            data: [7,2,6]
         }
-      ]
-    },
+    ]
+};
+
+var myBarChart = new Chart(ctx, {
+    type: 'bar',
+    data: data,
     options: {
-      legend: { display: false },
-      title: {
-        display: true,
-        text: 'Predicted world population (millions) in 2050'
-      }
+        barValueSpacing: 20,
+        scales: {
+            yAxes: [{
+                ticks: {
+                    min: 0,
+                }
+            }]
+        }
     }
 });
 </script>
