@@ -30,29 +30,34 @@
 </div>
 
 <canvas id="myChart" width="800" height="450"></canvas>
+
 <script>
-var ctx = document.getElementById("myChart").getContext("2d");
-var color = Chart.helpers.color;
+//the data will be injected by a plugin from SSG side
 var data = {
-    labels: ["Chocolate", "Vanilla", "Strawberry"],
+    labels: ["Device 1", "Device 2", "Device 3"],
     datasets: [
         {
-            label: "Harpo",
+            label: "Framework 1",
             backgroundColor: "TEAL",
-            data: [3,7,4]
+            data: [3, null, 4]
         },
         {
-            label: "Chico",
+            label: "Framework 2",
             backgroundColor: "OLIVE",
-            data: [4,3,5]
+            data: [4, 3, 4.5]
         },
         {
-            label: "Groucho",
+            label: "Framework 3",
             backgroundColor: "ORANGE",
-            data: [7,2,6]
+            data: [7.1, 2, 6]
         }
     ]
 };
+</script>
+
+<script>
+var ctx = document.getElementById("myChart").getContext("2d");
+var color = Chart.helpers.color;
 
 var myBarChart = new Chart(ctx, {
     type: 'bar',
@@ -60,11 +65,20 @@ var myBarChart = new Chart(ctx, {
     options: {
         barValueSpacing: 20,
         scales: {
-            yAxes: [{
-                ticks: {
+            yAxes: 
+            [
+            {
+                ticks: 
+                {
                     min: 0,
-                }
-            }]
+                },
+                scaleLabel: 
+                {
+                  display: true,
+                  labelString: 'Epoch time'
+                }            
+            }
+            ]
         }
     }
 });
