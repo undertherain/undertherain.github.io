@@ -79,7 +79,9 @@ NAVIGATION_LINKS = {
     (
         ("/publications/", "Publications"),
         ("/assets/Aleksandr_Drozd_CV.pdf", "Curriculum Vitae"),
-        ("https://twitter.com/bkbrd", "<i class=\"fab fa-twitter circle\"></i>")
+        ("https://twitter.com/bkbrd", "<i class=\"fab fa-twitter circle\"></i>"),
+        ("https://github.com/undertherain", "<i class=\"fab fa-github circle\"></i>"),
+        ("https://www.linkedin.com/in/aleksandr-drozd-1644a835/", "<i class=\"fab fa-linkedin\"></i>"),
     )
 }
 
