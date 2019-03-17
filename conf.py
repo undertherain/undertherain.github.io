@@ -79,6 +79,7 @@ NAVIGATION_LINKS = {
     (
         ("/publications/", "Publications"),
         ("/assets/Aleksandr_Drozd_CV.pdf", "Curriculum Vitae"),
+        ("https://twitter.com/bkbrd", "<i class=\"fab fa-twitter circle\"></i>")
     )
 }
 
