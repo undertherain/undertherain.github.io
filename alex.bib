@@ -1,3 +1,45 @@
+@Article{Li2019BigCorpus,
+author="Li, Bofang
+and Drozd, Aleksandr
+and Guo, Yuhe
+and Liu, Tao
+and Matsuoka, Satoshi
+and Du, Xiaoyong",
+title="Scaling Word2Vec on Big Corpus",
+journal="Data Science and Engineering",
+year="2019",
+month="Jun",
+day="01",
+volume="4",
+number="2",
+pages="157--175",
+abstract="Word embedding has been well accepted as an important feature in the area of natural language processing (NLP). Specifically, the Word2Vec model learns high-quality word embeddings and is widely used in various NLP tasks. The training of Word2Vec is sequential on a CPU due to strong dependencies between word--context pairs. In this paper, we target to scale Word2Vec on a GPU cluster. To do this, one main challenge is reducing dependencies inside a large training batch. We heuristically design a variation of Word2Vec, which ensures that each word--context pair contains a non-dependent word and a uniformly sampled contextual word. During batch training, we ``freeze'' the context part and update only on the non-dependent part to reduce conflicts. This variation also directly controls the training iterations by fixing the number of samples and treats high-frequency and low-frequency words equally. We conduct extensive experiments over a range of NLP tasks. The results show that our proposed model achieves a 7.5 times acceleration on 16 GPUs without accuracy drop. Moreover, by using high-level Chainer deep learning framework, we can easily implement Word2Vec variations such as CNN-based subword-level models and achieves similar scaling results.",
+issn="2364-1541",
+doi="10.1007/s41019-019-0096-6",
+url="https://doi.org/10.1007/s41019-019-0096-6"
+}
+
+@InProceedings{Salaria2019Repr,
+author="Salaria, Shweta
+and Drozd, Aleksandr
+and Podobas, Artur
+and Matsuoka, Satoshi",
+editor="Weiland, Mich{\`e}le
+and Juckeland, Guido
+and Trinitis, Carsten
+and Sadayappan, Ponnuswamy",
+title="Learning Neural Representations for Predicting GPU Performance",
+booktitle="High Performance Computing",
+year="2019",
+publisher="Springer International Publishing",
+address="Cham",
+pages="40--58",
+abstract="The graphic processing units (GPUs) have become a primary source of heterogeneity in today's computing systems. With the rapid increase in number and types of GPUs available, finding the best hardware accelerator for each application is a challenge. For that matter, it is time consuming and tedious to execute every application on every GPU system to learn the correlation between application properties and hardware characteristics. To address this problem, we extend our previously proposed collaborating filtering based modeling technique, to build an analytical model which can predict performance of applications across different GPU systems. Our model learns representations, or embeddings (dense vectors of latent features) for applications and systems and uses them to characterize the performance of various GPU-accelerated applications. We improve state-of-the-art collaborative filtering approach based on matrix factorization by building a multi-layer perceptron. In addition to increased accuracy in predicting application performance, we can use this model to simultaneously predict multiple metrics such as rates of memory access operations. We evaluate our approach on a set of 30 well-known micro-applications and seven Nvidia GPUs. As a result, we can predict expected instructions per second value with 90.6{\%} accuracy in average.",
+isbn="978-3-030-20656-7"
+}
+
+
+
 @INPROCEEDINGS{SalariaCollab,
 author={Shweta Salaria and Aleksandr Drozd and Artur Podobas and Satoshi Matsuoka},
 booktitle={2018 IEEE International Conference on Cluster Computing (CLUSTER)},
