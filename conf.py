@@ -82,6 +82,7 @@ NAVIGATION_LINKS = {
         ("https://twitter.com/bkbrd", "<i class=\"fab fa-twitter circle\"></i>"),
         ("https://github.com/undertherain", "<i class=\"fab fa-github circle\"></i>"),
         ("https://www.linkedin.com/in/aleksandr-drozd-1644a835/", "<i class=\"fab fa-linkedin\"></i>"),
+        ("https://www.instagram.com/brotherwort/", "<i class=\"fab fa-instagram\"></i>"),
     )
 }
 
