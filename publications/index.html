@@ -16,11 +16,9 @@
 <meta property="og:url" content="http://blackbird.pw/publications/">
 <meta property="og:description" content="Publication List
 
-2019
-Bofang Li, Aleksandr Drozd, Yuhe Guo, Tao Liu, Satoshi Matsuoka, and Xiaoyong Du.
-Scaling word2vec on big corpus.
-Data Science and Engineering, 4(2):157–175, Jun 2019.
-URL: http">
+2020
+Mohamed Wahib, Haoyu Zhang, Truong Thao Nguyen, Aleksandr Drozd, Jens Domke, Lingqi Zhang, Ryousei Takano, and Satoshi Matsuoka.
+Scaling distributed deep learning workloads beyo">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2018-06-02T16:52:16+09:00">
 </head>
@@ -71,6 +69,55 @@ URL: http">
     <div class="section" id="publication-list">
 <h2>Publication List</h2>
 <div class="publication-list">
+<h4>2020</h4>
+<ul><li class="publication" style="padding-bottom: 1em;">Mohamed Wahib, Haoyu Zhang, Truong Thao Nguyen, <strong>Aleksandr Drozd</strong>, Jens Domke, Lingqi Zhang, Ryousei Takano, and Satoshi Matsuoka.
+<strong>Scaling distributed deep learning workloads beyond the memory capacity with karma.</strong>
+In <em>Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis</em>, SC '20. IEEE Press, 2020.<br>
+                [<a href="javascript:void(0)" onclick="
+                (function(target, id) {
+                  if ($('#' + id).css('display') == 'block')
+                {
+                  $('#' + id).hide('fast');
+                  $(target).text('abstract▼')
+                }
+                else
+                {
+                  $('#' + id).show('fast');
+                  $(target).text('abstract▲')
+                }
+                })(this, 'abstract-Wahib2020karma');">abstract▼</a>] 
+            [<a href="javascript:void(0)" onclick="
+            (function(target, id) {
+              if ($('#' + id).css('display') == 'block')
+              {
+                $('#' + id).hide('fast');
+                $(target).text('BibTeX▼')
+              }
+              else
+              {
+                $('#' + id).show('fast');
+                $(target).text('BibTeX▲')
+              }
+            })(this, 'bibtex-Wahib2020karma');">BibTeX▼</a>]
+            
+                <div id="abstract-Wahib2020karma" class="publication-abstract" style="display:none">
+                <blockquote>The dedicated memory of hardware accelerators can be insufficient to store all weights and/or intermediate states of large deep learning models. Although model parallelism is a viable approach to reduce the memory pressure issue, significant modification of the source code and considerations for algorithms are required. An alternative solution is to use out-of-core methods instead of, or in addition to, data parallelism.We propose a performance model based on the concurrency analysis of out-of-core training behavior, and derive a strategy that combines layer swapping and redundant recomputing. We achieve an average of 1.52x speedup in six different models over the state-of-the-art out-of-core methods. We also introduce the first method to solve the challenging problem of out-of-core multi-node training by carefully pipelining gradient exchanges and performing the parameter updates on the host. Our data parallel out-of-core solution can outperform complex hybrid model parallelism in training large models, e.g. Megatron-LM and Turning-NLG.</blockquote>
+</div>
+                <div id="bibtex-Wahib2020karma" style="display:none"><pre>@inproceedings{Wahib2020karma,
+    author = "Wahib, Mohamed and Zhang, Haoyu and Nguyen, Truong Thao and Drozd, Aleksandr and Domke, Jens and Zhang, Lingqi and Takano, Ryousei and Matsuoka, Satoshi",
+    title = "Scaling Distributed Deep Learning Workloads beyond the Memory Capacity with KARMA",
+    year = "2020",
+    isbn = "9781728199986",
+    publisher = "IEEE Press",
+    booktitle = "Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis",
+    articleno = "19",
+    numpages = "15",
+    keywords = "GPUs, deep neural networks, out-of-core",
+    location = "Atlanta, Georgia",
+    series = "SC '20"
+}
+</pre></div>
+</li></ul>
 <h4>2019</h4>
 <ul>
 <li class="publication" style="padding-bottom: 1em;">Bofang Li, <strong>Aleksandr Drozd</strong>, Yuhe Guo, Tao Liu, Satoshi Matsuoka, and Xiaoyong Du.

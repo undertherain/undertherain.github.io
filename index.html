@@ -92,7 +92,7 @@
                 Currently I'm a 
                 <ul>
 <li>
-                    Founder and CEO at 
+                    founder and CEO at 
                     <a href="https://amigawa.com">Amigawa</a>
                   </li>
                   <li>
@@ -203,42 +203,84 @@
 <p class="mb-4">CFDG-inspired cairo-based pythonic generative art tool</p>
           </div>
           <div class="col-4 mx-auto text-center">
-            <a href="listings/cf.py.html">cf.py</a>  <a href="listings/cf.py">(Source)</a><table class="highlighttable"><tr>
-<td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15</pre></div></td>
-<td class="code">
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">contextfree.contextfree</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="nd">@check_limits</span>
-<span class="k">def</span> <span class="nf">branch</span><span class="p">():</span>
-    <span class="n">line</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-    <span class="k">with</span> <span class="n">translate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">):</span>
-        <span class="k">with</span> <span class="n">scale</span><span class="p">(</span><span class="mf">0.7</span> <span class="o">+</span> <span class="n">rnd</span><span class="p">(</span><span class="mf">0.3</span><span class="p">)):</span>
-            <span class="k">with</span> <span class="n">rotate</span><span class="p">(</span><span class="o">-</span><span class="mf">0.4</span> <span class="o">+</span> <span class="n">rnd</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)):</span>
-                <span class="n">branch</span><span class="p">()</span>
-            <span class="k">with</span> <span class="n">rotate</span><span class="p">(</span><span class="mf">0.4</span> <span class="o">+</span> <span class="n">rnd</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)):</span>
-                <span class="n">branch</span><span class="p">()</span>
-<span class="n">init</span><span class="p">(</span><span class="n">canvas_size</span><span class="o">=</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">300</span><span class="p">))</span>
-<span class="k">with</span> <span class="n">translate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-    <span class="k">with</span> <span class="n">scale</span><span class="p">(</span><span class="mf">0.6</span><span class="p">):</span>
-        <span class="n">branch</span><span class="p">()</span>
-<span class="n">display_ipython</span><span class="p">()</span>
-</pre></div>
-</td>
-</tr></table>
-</div>
+            <a href="listings/cf.py.html">cf.py</a>  <a href="listings/cf.py">(Source)</a><div class="code"><table class="codetable">
+<tr>
+<td class="linenos linenodiv"><a href="#-1"><code data-line-number=" 1"></code></a></td>
+<td class="code"><code><span class="kn">from</span> <span class="nn">contextfree.contextfree</span> <span class="kn">import</span> <span class="o">*</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#-2"><code data-line-number=" 2"></code></a></td>
+<td class="code"><code><span class="nd">@check_limits</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#-3"><code data-line-number=" 3"></code></a></td>
+<td class="code"><code><span class="k">def</span> <span class="nf">branch</span><span class="p">():</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#-4"><code data-line-number=" 4"></code></a></td>
+<td class="code"><code>    <span class="n">line</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#-5"><code data-line-number=" 5"></code></a></td>
+<td class="code"><code>    <span class="k">with</span> <span class="n">translate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">):</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#-6"><code data-line-number=" 6"></code></a></td>
+<td class="code"><code>        <span class="k">with</span> <span class="n">scale</span><span class="p">(</span><span class="mf">0.7</span> <span class="o">+</span> <span class="n">rnd</span><span class="p">(</span><span class="mf">0.3</span><span class="p">)):</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#-7"><code data-line-number=" 7"></code></a></td>
+<td class="code"><code>            <span class="k">with</span> <span class="n">rotate</span><span class="p">(</span><span class="o">-</span><span class="mf">0.4</span> <span class="o">+</span> <span class="n">rnd</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)):</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#-8"><code data-line-number=" 8"></code></a></td>
+<td class="code"><code>                <span class="n">branch</span><span class="p">()</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#-9"><code data-line-number=" 9"></code></a></td>
+<td class="code"><code>            <span class="k">with</span> <span class="n">rotate</span><span class="p">(</span><span class="mf">0.4</span> <span class="o">+</span> <span class="n">rnd</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)):</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#-10"><code data-line-number="10"></code></a></td>
+<td class="code"><code>                <span class="n">branch</span><span class="p">()</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#-11"><code data-line-number="11"></code></a></td>
+<td class="code"><code><span class="n">init</span><span class="p">(</span><span class="n">canvas_size</span><span class="o">=</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">300</span><span class="p">))</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#-12"><code data-line-number="12"></code></a></td>
+<td class="code"><code><span class="k">with</span> <span class="n">translate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#-13"><code data-line-number="13"></code></a></td>
+<td class="code"><code>    <span class="k">with</span> <span class="n">scale</span><span class="p">(</span><span class="mf">0.6</span><span class="p">):</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#-14"><code data-line-number="14"></code></a></td>
+<td class="code"><code>        <span class="n">branch</span><span class="p">()</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#-15"><code data-line-number="15"></code></a></td>
+<td class="code"><code><span class="n">display_ipython</span><span class="p">()</span>
+</code></td>
+</tr>
+</table></div>
+          </div>
           <div class="col-4 mx-auto text-center">
             <a href="https://github.com/undertherain/pycontextfree/">
               <img src="https://user-images.githubusercontent.com/1635907/30413703-9e585f54-995a-11e7-8566-bdded386be8d.png" alt="pycontextfree sample"></a>
