@@ -1,4 +1,5 @@
 nikola
-pybtex
-webassets
 ghp-import2
+pybtex
+watchdog
+webassets
