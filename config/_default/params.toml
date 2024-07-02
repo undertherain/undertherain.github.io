@@ -128,8 +128,8 @@ disableTextInHeader = false
   # measurementId = "XXXXXX"
 
 [fathomAnalytics]
-  # site = "ABC12345"
-  # domain = "llama.yoursite.com"
+  site = "HXRHPMYO"
+  domain = "blackbird.pw"
 
 [umamiAnalytics]
   # websiteid = "ABC12345"
