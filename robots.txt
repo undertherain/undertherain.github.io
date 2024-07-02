@@ -1,4 +1,0 @@
-Sitemap: http://blackbird.pw/sitemapindex.xml
-
-User-Agent: *
-Host: blackbird.pw
