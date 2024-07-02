@@ -31,11 +31,12 @@ weight = 9
 
 
 [[main]]
-identifier = "cv"
 pre = "download"
 name = "CV"
-url = "/Aleksandr_Drozd_CV.pdf"
+disablePathToLower = true
+url = "https://blackbird.pw/Aleksandr_Drozd_CV.pdf"
 weight = 10
+
 
 
 [[main]]
