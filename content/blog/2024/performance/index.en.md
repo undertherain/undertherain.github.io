@@ -1,5 +1,5 @@
 ---
-title: "Understanding Deep Learning Performance"
+title: "Understanding deep learning performance"
 date: 2024-04-17
 description: ""
 showDate: false

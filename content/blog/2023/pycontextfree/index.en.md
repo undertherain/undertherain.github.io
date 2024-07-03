@@ -1,5 +1,5 @@
 ---
-title: "Generative Art with Pycontextfree"
+title: "Generative art with pycontextfree"
 date: 2023-06-05
 description: "Pythonic generative art tool"
 summary: "this is summary"
