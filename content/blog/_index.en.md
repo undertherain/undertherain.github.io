@@ -4,6 +4,6 @@ description: "My blog"
 ---
 
 {{< lead >}}
-Hey hey! This is more like
+Hey hey!
 {{< /lead >}}
 
