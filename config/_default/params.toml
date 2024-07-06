@@ -129,7 +129,7 @@ disableTextInHeader = false
 
 [fathomAnalytics]
   site = "HXRHPMYO"
-  domain = "blackbird.pw"
+  # domain = "blackbird.pw"
 
 [umamiAnalytics]
   # websiteid = "ABC12345"
