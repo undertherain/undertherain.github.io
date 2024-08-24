@@ -1,11 +1,14 @@
 ---
-title: "Understanding deep learning performance"
+title: "Understanding deep learning computational performance"
 date: 2024-04-17
 description: ""
 showDate: false
 layout: "simple"
 ---
 
+Faster AI systems are better! More peformance is better! Hardly anybody doubts it.
+But how do we measure "faster" and "performance"? Didn't Kelvin said "If you cannot measure it, you cannot improve it.”?
+So, let's talk about computational performance.
 
 ## Pareto optimality
 
