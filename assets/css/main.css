@@ -1,0 +1,50 @@
+@import "../../themes/blowfish/assets/css/main.css";
+
+#popup {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(180, 180, 180);
+    padding: 6px;
+    backdrop-filter: blur(10px);
+}
+
+.word-blank {
+    display: inline-block;
+    text-align: center;
+    border: 1px dashed;
+    cursor: pointer;
+}
+
+.word-correct
+{
+    text-decoration: underline;
+    text-decoration-color: greenyellow;
+    border-color: yellowgreen;
+}
+
+.word-wrong
+{
+    text-decoration: line-through;
+    text-decoration-color: rgb(183, 0, 0);
+    border-color: red;
+}
+
+.choice {
+    margin: 2px 0;
+    display: block;
+    cursor: pointer;
+}
+
+.quiz-btn {
+    background-color: #2e3c5c; /* Green */
+    border: none;
+    color: rgba(255, 255, 255, 0.834);
+    padding: 2px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
