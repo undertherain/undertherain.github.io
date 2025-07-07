@@ -13,7 +13,7 @@ title = "Aleksandr Drozd"
   # description = "My awesome website"
   # copyright = "Copy, _right?_ :thinking_face:"
 
-[author]
+[params.author]
   name = "Aleksandr Drozd"
 #   image = "img/blowfish_logo.png"
 #   headline = "I'm only human"
