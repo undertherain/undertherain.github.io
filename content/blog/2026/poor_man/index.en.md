@@ -65,4 +65,6 @@ The ideal machine for secure, enterprise-grade local AI is not an 8-way GPU mini
 - 768 GB to 1.5 TB of DDR5 ECC RAM (filling all 12 memory channels)
 - 1× prosumer GPU (e.g. RTX 3090, 4090, or RTX 4500 Ada) purely to act as the Prefill acceleration engine
 
+A popular alternative in the same category is the **Mac Studio** — decent unified-memory bandwidth, enough capacity to run models well beyond what fits in a consumer GPU, and the same "not the fastest, but it runs" trade-off. The ceiling is the difference: an M4-class chip caps under 128 GB of unified memory, while an EPYC board can take you into the terabyte range. For mid-sized models, the Mac is often the simpler buy; for the 400B+ class, you need the room a server platform gives you.
+
 This box won't outrun a rack of H100s — nothing at this price will. What it gives you is **access**: the ability to run 400B+ models at all, on your own hardware, with your own data. For a realistic workload — a small team running local agents or processing documents at a bursty, sparse pace — that's the whole point. A half-million-dollar server only starts to pay for itself under 24/7 batched inference, and almost nobody outside a hyperscaler actually runs that way.
