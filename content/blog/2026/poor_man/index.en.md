@@ -1,6 +1,6 @@
 ---
 title: "Building the Poor Man's AI Supercomputer"
-date: 2026-04-17
+date: 2026-04-20
 description: "Running 400B+ parameter LLMs locally on an EPYC + single-GPU budget box, by splitting inference into its decode and prefill phases."
 tags: ["AI", "LLM", "inference", "hardware", "performance", "EPYC", "GPU"]
 showDate: false
@@ -59,12 +59,20 @@ Because they are separated, the GPU never waits around for slow token generation
 
 ## The Final Hardware Blueprint
 
-The ideal machine for secure, enterprise-grade local AI is not an 8-way GPU mining rig. It looks like this:
+The recipe we've been building up looks like this:
 
 - 1× AMD EPYC processor (32 to 64 cores)
 - 768 GB to 1.5 TB of DDR5 ECC RAM (filling all 12 memory channels)
 - 1× prosumer GPU (e.g. RTX 3090, 4090, or RTX 4500 Ada) purely to act as the Prefill acceleration engine
 
-A popular alternative in the same category is the **Mac Studio** — decent unified-memory bandwidth, enough capacity to run models well beyond what fits in a consumer GPU, and the same "not the fastest, but it runs" trade-off. The ceiling is the difference: an M4-class chip caps under 128 GB of unified memory, while an EPYC board can take you into the terabyte range. For mid-sized models, the Mac is often the simpler buy; for the 400B+ class, you need the room a server platform gives you.
+## Alternatives in the Same Category
 
-This box won't outrun a rack of H100s — nothing at this price will. What it gives you is **access**: the ability to run 400B+ models at all, on your own hardware, with your own data. For a realistic workload — a small team running local agents or processing documents at a bursty, sparse pace — that's the whole point. A half-million-dollar server only starts to pay for itself under 24/7 batched inference, and almost nobody outside a hyperscaler actually runs that way.
+**Mac Studio.** Decent unified-memory bandwidth, enough capacity to run models well beyond what fits in a consumer GPU, and the same "not the fastest, but it runs" trade-off. The ceiling is the difference: an M4-class chip caps under 128 GB of unified memory, while an EPYC board can take you into the terabyte range. For mid-sized models, the Mac is often the simpler buy; for the 400B+ class, you need the room a server platform gives you.
+
+**GPU mining rig.** A pile of cheap consumer GPUs (3090s, used P40s) on PCIe risers. Here you're essentially restricted to *pipeline parallelism* — the model is split across GPUs layer-by-layer, and activations are passed down the chain. Tensor parallelism is effectively off the table: it needs fast all-reduce traffic between GPUs, which means NVLink, which mining rigs don't have. Data parallelism doesn't help either, since it requires each GPU to hold the full model.
+
+That leaves three sharp downsides. **Power draw** — a fleet of 350 W cards adds up fast. **Interconnect bandwidth** — go full "bitcoin farm" with x1 PCIe risers and you're moving activations at ~1 GB/s between layers, which will dominate token latency. **Pipeline bubbles** — with naive PP, only one GPU is actually working on a given prompt at a time, so your aggregate throughput is divided by N; the GPUs mostly take turns. You can recover it by scheduling different prompts onto each stage, phase-shifted, so every GPU is always busy on something — but that only pays off under continuous batched load, exactly the 24/7 scenario this whole approach is trying to avoid.
+
+## What We're Actually Aiming At
+
+We're not aiming at fast — we're aiming at **possible**. This box won't outrun a rack of H100s; nothing at this price will. What it can do is run 400B+ models *at all*, on your own hardware, with your own data. For a realistic workload — a small team running local agents or processing documents at a bursty, sparse pace — that's the whole point. A half-million-dollar server only starts to pay for itself under 24/7 batched inference, and almost nobody outside a hyperscaler actually runs that way.
