@@ -7,7 +7,9 @@ showDate: false
 layout: "simple"
 ---
 
-Running massive, 400B+ parameter AI models locally is no longer restricted to multi-million-dollar server farms. If you need top-tier intelligence and absolute data privacy, you don't need a rack of Nvidia H100s. You just need to understand the physics of how Large Language Models (LLMs) actually process data.
+Running massive, 400B+ parameter AI models locally does not have to be restricted to multi-million-dollar server farms.
+If you need top-tier intelligence and absolute data privacy, you don't need a rack of Nvidia H100s.
+You just need to understand the physics of how Large Language Models (LLMs) actually process data.
 
 To build a cost-effective powerhouse, we have to stop treating the LLM as a single, monolithic program and split it into its two fundamental phases: **Decode** and **Prefill**.
 
@@ -15,11 +17,11 @@ To build a cost-effective powerhouse, we have to stop treating the LLM as a sing
 
 *Generating the response, one token at a time.*
 
-The biggest misconception in AI hardware is that generating text requires massive compute power. It doesn't. Decode is strictly **memory-bandwidth bound**.
+The biggest misconception in AI hardware is that generating text requires massive compute power. It doesn't. Decode is largely **memory-bandwidth bound**.
 
 To generate a single word, the system has to load the entire massive model into the processor's cores, do a tiny bit of math, and spit out the word. If your model is larger than your GPU's VRAM, pushing those gigabytes of data back and forth across a PCIe slot for every single token will throttle your speed to absolute zero.
 
-**The solution: do the decode in place.** This is why the foundation of the Poor Man's Supercomputer is a heavy-duty server processor, like an AMD EPYC. Instead of the 2 memory channels found in a desktop PC, an EPYC board has 12 channels. If you populate all of them with DDR5 memory, you create a massive, terabyte-sized ocean of RAM with a firehose bandwidth of ~500 GB/s.
+**The solution: do the decode in place.** This is why the foundation of the Poor Man's Supercomputer is a heavy-duty server processor, like an AMD EPYC. Instead of the 2 memory channels found in a desktop PC, an EPYC board has 12 channels. If you populate all of them with DDR5 memory, you create a massive, terabyte-sized ocean of RAM with a decent bandwidth of ~500 GB/s.
 
 **The software trick:** to actually hit that 500 GB/s, you have to be smart about the math. Decode is just vector-matrix multiplication. To prevent the EPYC's internal highway (the Infinity Fabric) from clogging, we use NUMA-aware execution:
 
