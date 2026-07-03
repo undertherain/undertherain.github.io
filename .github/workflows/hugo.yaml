@@ -57,6 +57,24 @@ jobs:
           HUGO_ENV: production
         run:
           hugo --gc --minify  --baseURL "${{ steps.pages.outputs.base_url }}"
+      - name: Inspect build output
+        run: |
+          test -f public/index.html
+          test -f public/CNAME
+          du -sh public
+          printf 'CNAME: '
+          cat public/CNAME
+          printf '\n'
+          if find public -type l | grep -q .; then
+            echo "GitHub Pages artifacts cannot contain symlinks."
+            find public -type l -ls
+            exit 1
+          fi
+          if find public -type f -size +100M | grep -q .; then
+            echo "GitHub Pages artifacts cannot contain files larger than 100 MB."
+            find public -type f -size +100M -print
+            exit 1
+          fi
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
@@ -73,3 +91,24 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
+      - name: Show Pages deployment diagnostics
+        if: failure()
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          api_url="${GITHUB_API_URL:-https://api.github.com}"
+          pages_url="${api_url}/repos/${GITHUB_REPOSITORY}/pages"
+          deployment_url="${api_url}/repos/${GITHUB_REPOSITORY}/pages/deployments/${GITHUB_SHA}"
+          echo "Fetching Pages configuration from ${pages_url}"
+          curl -fsS \
+            -H "Authorization: Bearer ${GITHUB_TOKEN}" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "${pages_url}" || true
+          printf '\n'
+          echo "Fetching Pages deployment status from ${deployment_url}"
+          curl -fsS \
+            -H "Authorization: Bearer ${GITHUB_TOKEN}" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "${deployment_url}" || true
