@@ -1,7 +1,7 @@
 ---
 title: "Doing things with static word embeddings"
 date: 2023-03-15
-description: ""
+description: "A look back at static word embeddings: how they were trained, what they can still do, and why they remain a useful tool in the LLM era."
 showDate: false
 ---
 

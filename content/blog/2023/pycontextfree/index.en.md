@@ -1,8 +1,8 @@
 ---
 title: "Generative art with pycontextfree"
 date: 2023-06-05
-description: "Pythonic generative art tool"
-summary: "this is summary"
+description: "Making algorithmic art in Python with pycontextfree, a Pythonic reimplementation of the Context Free grammar-based art tool."
+summary: "Making algorithmic art in Python with pycontextfree, a Pythonic reimplementation of the Context Free grammar-based art tool."
 tags: ["programming", "art"]
 layout: "simple"
 ---

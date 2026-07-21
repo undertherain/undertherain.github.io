@@ -1,5 +1,5 @@
 ---
-title: "Building the Poor Man's AI Supercomputer"
+title: "Building the poor man's AI supercomputer"
 date: 2026-04-20
 description: "Running 400B+ parameter LLMs locally on an EPYC + single-GPU budget box, by splitting inference into its decode and prefill phases."
 tags: ["AI", "LLM", "inference", "hardware", "performance", "EPYC", "GPU"]

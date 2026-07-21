@@ -1,7 +1,7 @@
 ---
 title: "Understanding deep learning computational performance"
 date: 2024-04-17
-description: ""
+description: "What 'fast' actually means for deep learning workloads: Pareto optimality, throughput vs latency, precision, power, and how to measure performance without fooling yourself."
 showDate: false
 layout: "simple"
 ---
