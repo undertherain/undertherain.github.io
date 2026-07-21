@@ -10,7 +10,7 @@ title = "Aleksandr Drozd"
   dateFormat = "2 January 2006"
   # logo = "img/logo.png"
   # secondaryLogo = "img/secondary-logo.png"
-  # description = "My awesome website"
+  description = "Aleksandr Drozd — research, development and consulting in Artificial Intelligence and High Performance Computing, based in Japan. CTO at AI-KIP, scientific R&D consulting via Amigawa GK, formerly RIKEN CCS."
   # copyright = "Copy, _right?_ :thinking_face:"
 
 [params.author]
