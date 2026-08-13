@@ -6,4 +6,4 @@ Finally, the day came - I built my own :D
 Meet Better Image View (`biv`): a deliberately small, keyboard-first viewer for Linux.
 Killer feature (from memories of using ACDSee 20 years ago when I was on Windows) - it preloads the next image while you view the current one.
 
-Some more details and implementation here: [link]
+Some more details and implementation here: [https://blackbird.pw/blog/2026/better-image-view/]
