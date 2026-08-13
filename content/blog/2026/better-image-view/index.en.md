@@ -30,6 +30,8 @@ My common workflow is opening a file from Midnight Commander and then moving thr
 
 So I built **Better Image View**, or `biv`: a deliberately small, keyboard-first image viewer for Linux.
 
+![Better Image View](biv.png)
+
 Obviously, “better” is subjective - in this case it mostly means “behaves the way I expect.”
 
 It starts fullscreen. Escape closes it. Page Down, Space, the arrow keys, and the mouse wheel move through the directory. Large images shrink to the available screen. Small images remain at their natural size. Zooming and panning are there when needed, but they are not the main event.
