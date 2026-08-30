@@ -1,0 +1,16 @@
+{
+  "client_id": "https://blackbird.pw/oauth/second-brain-tools.json",
+  "client_name": "Aleksandr's Second Brain Tool Plane",
+  "redirect_uris": [
+    "http://127.0.0.1:18766/callback",
+    "http://localhost:18766/callback"
+  ],
+  "token_endpoint_auth_method": "none",
+  "grant_types": [
+    "authorization_code"
+  ],
+  "response_types": [
+    "code"
+  ],
+  "client_uri": "https://blackbird.pw/"
+}
